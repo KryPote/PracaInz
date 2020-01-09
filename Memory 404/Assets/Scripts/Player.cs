@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(2, 2, 2);
         }
+        if (Input.GetButtonDown("Jump") && grounded)
+        {
+            rb2d.AddForce(Vector2.up * jumpPower);
+        }
     }
 
     void FixedUpdate()
