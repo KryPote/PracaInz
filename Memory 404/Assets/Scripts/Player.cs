@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         anim.SetBool("Grounded",grounded);
-        anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+        anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
 
         if(Input.GetAxis("Horizontal") < -0.1f)
         {
@@ -44,7 +44,20 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        Vector3 easeVelocity = rb2d.velocity;
+        easeVelocity.y = rb2d.velocity.y;
+        easeVelocity.z = 0.0f;
+        easeVelocity.x *= 0.75f;
+
         float inputH = Input.GetAxis("Horizontal");
+
+        //Sztuczne tarcie aka wygaszanie prędkości gracza
+        if (grounded)
+        {
+            rb2d.velocity = easeVelocity;
+
+        }
+
 
         rb2d.AddForce((Vector2.right * speed) * inputH);
 

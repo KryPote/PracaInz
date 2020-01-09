@@ -338,7 +338,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.03125
+  m_TransitionDuration: 0.009583324
   m_TransitionOffset: 0
   m_ExitTime: 0.50000006
   m_HasExitTime: 0
@@ -356,7 +356,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.001
   - m_ConditionMode: 1
     m_ConditionEvent: Grounded
     m_EventTreshold: 0
@@ -366,7 +366,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.026015632
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.20946422
   m_HasExitTime: 0
