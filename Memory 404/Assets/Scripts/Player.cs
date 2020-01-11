@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float jumpPower = 150f;
 
     public bool grounded;
+    public bool candoubleJump;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        anim.SetBool("candoubleJump", candoubleJump);
         anim.SetBool("Grounded",grounded);
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
 
@@ -36,9 +38,24 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(2, 2, 2);
         }
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            rb2d.AddForce(Vector2.up * jumpPower);
+            if (grounded)
+            {
+                rb2d.AddForce(Vector2.up * jumpPower);
+                candoubleJump = true;
+            }
+            else
+            {
+                if (candoubleJump)
+                {
+                    candoubleJump = false;
+                    rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
+                    rb2d.AddForce(Vector2.up * jumpPower);
+                }
+
+            }
+            
         }
     }
 
