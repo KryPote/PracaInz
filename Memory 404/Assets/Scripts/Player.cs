@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Player : MonoBehaviour
 
     public bool grounded;
     public bool candoubleJump;
+
+    public int curHealth = 3;
+    public int maxHealth = 3;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -21,15 +25,18 @@ public class Player : MonoBehaviour
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
+        curHealth = maxHealth;
+
 
     }
 
-    private void Update()
+    void Update()
     {
         anim.SetBool("candoubleJump", candoubleJump);
         anim.SetBool("Grounded",grounded);
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
 
+        //Kontrolki lewo-prawo
         if(Input.GetAxis("Horizontal") < -0.1f)
         {
             transform.localScale = new Vector3(-2, 2, 2);
@@ -38,24 +45,34 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(2, 2, 2);
         }
+        //Skok i doublejump
         if (Input.GetButtonDown("Jump"))
         {
-            if (grounded)
+            if (grounded) //Zwykły skok
             {
                 rb2d.AddForce(Vector2.up * jumpPower);
                 candoubleJump = true;
             }
             else
             {
-                if (candoubleJump)
+                if (candoubleJump) //Doublejump
                 {
                     candoubleJump = false;
                     rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
-                    rb2d.AddForce(Vector2.up * jumpPower);
+                    rb2d.AddForce(((Vector2.up * jumpPower)/2) + ((Vector2.up * jumpPower)/4));
                 }
 
             }
             
+        }
+        //Zdrufko
+        if (curHealth > maxHealth)
+        {
+            curHealth = maxHealth;
+        }
+        if (curHealth <= 0)
+        {
+            Death();
         }
     }
 
@@ -89,5 +106,9 @@ public class Player : MonoBehaviour
             rb2d.velocity = new Vector2(-maxspeed, rb2d.velocity.y);
         }
 
+    }
+    void Death()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 }
