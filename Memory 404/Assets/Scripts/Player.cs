@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public bool grounded;
     public bool candoubleJump;
 
-    public int curHealth = 3;
+    public int curHealth = 0;
     public int maxHealth = 3;
 
     private Rigidbody2D rb2d;
@@ -91,8 +91,6 @@ public class Player : MonoBehaviour
             rb2d.velocity = easeVelocity;
 
         }
-
-
         rb2d.AddForce((Vector2.right * speed) * inputH);
 
         if(rb2d.velocity.x > maxspeed) //ogarniczenie prędkości w prawo
@@ -105,10 +103,14 @@ public class Player : MonoBehaviour
 
             rb2d.velocity = new Vector2(-maxspeed, rb2d.velocity.y);
         }
-
+    }
+    public void Damage(int dmg)
+    {
+        curHealth -= dmg;
     }
     void Death()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
+    
 }
