@@ -12,10 +12,10 @@ public class Spikes : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+       if (col.CompareTag("Player"))
         {
             player.Damage(1);
-            Debug.Log("DEMYCZ");
+            StartCoroutine(player.Knockback(0.02f, 350, player.transform.position));
         }
     }
 

@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 161429921}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,6 +383,7 @@ MonoBehaviour:
   jumpPower: 300
   grounded: 0
   candoubleJump: 0
+  damaged: 0
   curHealth: 0
   maxHealth: 3
 --- !u!1 &803508821
@@ -1072,6 +1073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1402947267}
+  - component: {fileID: 1402947268}
   m_Layer: 5
   m_Name: HUD_HP
   m_TagString: Untagged
@@ -1100,6 +1102,25 @@ RectTransform:
   m_AnchoredPosition: {x: 1.5, y: -2.6099854}
   m_SizeDelta: {x: 100, y: 99}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1402947268
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402947266}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8b811cf9750cf749be1051ee7e53b3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1554504738
 GameObject:
   m_ObjectHideFlags: 0

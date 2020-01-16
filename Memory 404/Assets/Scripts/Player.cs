@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public bool grounded;
     public bool candoubleJump;
+    public bool damaged = false;
 
     public int curHealth = 0;
     public int maxHealth = 3;
@@ -33,11 +34,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         anim.SetBool("candoubleJump", candoubleJump);
-        anim.SetBool("Grounded",grounded);
+        anim.SetBool("Grounded", grounded);
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
+        anim.SetBool("damaged", damaged);
 
         //Kontrolki lewo-prawo
-        if(Input.GetAxis("Horizontal") < -0.1f)
+        if (Input.GetAxis("Horizontal") < -0.1f)
         {
             transform.localScale = new Vector3(-2, 2, 2);
         }
@@ -59,11 +61,11 @@ public class Player : MonoBehaviour
                 {
                     candoubleJump = false;
                     rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
-                    rb2d.AddForce(((Vector2.up * jumpPower)/2) + ((Vector2.up * jumpPower)/4));
+                    rb2d.AddForce(((Vector2.up * jumpPower) / 2) + ((Vector2.up * jumpPower) / 4));
                 }
 
             }
-            
+
         }
         //Zdrufko
         if (curHealth > maxHealth)
@@ -93,12 +95,12 @@ public class Player : MonoBehaviour
         }
         rb2d.AddForce((Vector2.right * speed) * inputH);
 
-        if(rb2d.velocity.x > maxspeed) //ogarniczenie prędkości w prawo
+        if (rb2d.velocity.x > maxspeed) //ogarniczenie prędkości w prawo
         {
 
             rb2d.velocity = new Vector2(maxspeed, rb2d.velocity.y);
         }
-        if(rb2d.velocity.x < -maxspeed) //ogarniczenie prędkości w lewo
+        if (rb2d.velocity.x < -maxspeed) //ogarniczenie prędkości w lewo
         {
 
             rb2d.velocity = new Vector2(-maxspeed, rb2d.velocity.y);
@@ -112,5 +114,16 @@ public class Player : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
-    
+    public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir)
+    {
+        float timer = 0;
+        while (knockDur > timer)
+        {
+            timer += Time.deltaTime;
+            rb2d.AddForce(new Vector3(knockbackDir.x * 100, knockbackDir.y * knockbackPwr, transform.position.z));
+            damaged = true;
+        }
+        damaged = false;
+        yield return 0;
+    }
 }
