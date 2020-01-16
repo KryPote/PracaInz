@@ -10,9 +10,9 @@ public class Spikes : MonoBehaviour
     {
 
     }
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.CompareTag("Player"))
+        if (col.CompareTag("Player"))
         {
             player.Damage(1);
             Debug.Log("DEMYCZ");
