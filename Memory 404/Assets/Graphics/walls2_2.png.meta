@@ -94,30 +94,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -142,7 +118,7 @@ TextureImporter:
         - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: 162bcc9a7c6cefd4dbdd1d92a51c776d
+      spriteID: 33e0697fc8cfa424fa74e48ce32ca482
       internalID: 2275883928948441929
       vertices: []
       indices: 
@@ -169,7 +145,7 @@ TextureImporter:
         - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: 92798ea83eafee94a9c6b5721a7d75d9
+      spriteID: bc01fc097cb187a4980dddc3a164b54a
       internalID: 3024913349509472276
       vertices: []
       indices: 
@@ -177,33 +153,6 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: walls2_2_2
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -50, y: 50}
-        - {x: -50, y: -50}
-        - {x: 50, y: -50}
-        - {x: 50, y: 23}
-        - {x: 2, y: 23}
-        - {x: 2, y: 50}
-      tessellationDetail: 0
-      bones: []
-      spriteID: fce35e323231ec14ea839572c68d6c75
-      internalID: -2356841706726360600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walls2_2_3
       rect:
         serializedVersion: 2
         x: 0
@@ -223,7 +172,34 @@ TextureImporter:
         - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: 2add972ea39417d45950822986a25912
+      spriteID: f2bb772041445364fa3905fa73447633
+      internalID: -2356841706726360600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls2_2_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 23}
+        - {x: 2, y: 23}
+        - {x: 2, y: 50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a36ed0952368f41a5124fcaa1ddae4
       internalID: 6426659176175206974
       vertices: []
       indices: 
