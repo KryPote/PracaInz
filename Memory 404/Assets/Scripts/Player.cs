@@ -16,8 +16,10 @@ public class Player : MonoBehaviour
     public int curHealth = 0;
     public int maxHealth = 3;
 
+    //referencje
     private Rigidbody2D rb2d;
     private Animator anim;
+    public GameMaster gameMaster;
 
 
 
@@ -125,5 +127,14 @@ public class Player : MonoBehaviour
         }
         damaged = false;
         yield return 0;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PickUp"))
+        {
+            Destroy(collision.gameObject);
+            gameMaster.nuts += 1;
+
+        }
     }
 }
