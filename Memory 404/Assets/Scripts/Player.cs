@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
         while (knockDur > timer)
         {
             timer += Time.deltaTime;
-            rb2d.AddForce(new Vector3(knockbackDir.x * 100, knockbackDir.y * knockbackPwr, transform.position.z));
+            rb2d.AddForce(new Vector3(knockbackDir.x * -100, knockbackDir.y * knockbackPwr, transform.position.z));
             damaged = true;
         }
         damaged = false;
