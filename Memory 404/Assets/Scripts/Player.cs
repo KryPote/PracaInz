@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     public int maxHealth = 3;
     public float maxspeed = 3;
 
-    //referencje
     private Rigidbody2D rb2d;
     public float speed = 50f;
 
@@ -53,7 +52,7 @@ public class Player : MonoBehaviour
                 {
                     candoubleJump = false;
                     rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
-                    rb2d.AddForce(Vector2.up * jumpPower / 2 + Vector2.up * jumpPower / 4);
+                    rb2d.AddForce((Vector2.up * jumpPower / 2 )+ (Vector2.up * jumpPower / 4));
                 }
             }
         }
