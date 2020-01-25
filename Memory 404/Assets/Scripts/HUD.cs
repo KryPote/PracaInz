@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
@@ -7,13 +6,14 @@ public class HUD : MonoBehaviour
     public Sprite[] HeartSprites;
 
     public Image HeartUI;
-  
-    public Player player;
-    void Start()
-    {
 
+    public Player player;
+
+    private void Start()
+    {
     }
-    void Update()
+
+    private void Update()
     {
         HeartUI.sprite = HeartSprites[player.curHealth];
     }

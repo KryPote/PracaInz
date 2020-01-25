@@ -1,34 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    private bool paused;
     public GameObject PauseUI;
 
-    private bool paused = false;
-
-    void Start()
+    private void Start()
     {
         PauseUI.SetActive(false);
-
     }
-    void Update()
+
+    private void Update()
     {
-        if(Input.GetButtonDown("Pause"))
-        {
-            paused = !paused;
-        }
-        if(paused)
+        if (Input.GetButtonDown("Pause")) paused = !paused;
+        if (paused)
         {
             PauseUI.SetActive(true);
             Time.timeScale = 0;
         }
-        if(!paused)
+
+        if (!paused)
         {
             PauseUI.SetActive(false);
             Time.timeScale = 1;
         }
-
     }
 }
