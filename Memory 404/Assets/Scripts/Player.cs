@@ -25,8 +25,10 @@ public class Player : MonoBehaviour
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
+       
         curHealth = maxHealth;
     }
+
 
     private void Update()
     {
@@ -36,8 +38,16 @@ public class Player : MonoBehaviour
         anim.SetBool("damaged", damaged);
 
         //Kontrolki lewo-prawo
-        if (Input.GetAxis("Horizontal") < -0.1f) transform.localScale = new Vector3(-2, 2, 2);
-        if (Input.GetAxis("Horizontal") > 0.1f) transform.localScale = new Vector3(2, 2, 2);
+        if (Input.GetAxis("Horizontal") < -0.1f)
+        {
+            transform.localScale = new Vector3(-2, 2, 2);
+        }
+
+        if (Input.GetAxis("Horizontal") > 0.1f)
+        {
+            transform.localScale = new Vector3(2, 2, 2);
+        }
+
         //Skok i doublejump
         if (Input.GetButtonDown("Jump"))
         {
