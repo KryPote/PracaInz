@@ -101,17 +101,15 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir)
+    public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector3 knockBackDir)
     {
         float timer = 0;
         while (knockDur > timer)
         {
             timer += Time.deltaTime;
-            rb2d.AddForce(new Vector3(knockbackDir.x * -100, knockbackDir.y * knockbackPwr, transform.position.z));
-            damaged = true;
+            rb2d.velocity = new Vector2(0, 0);   //<----------------------
+            rb2d.AddForce(new Vector3(knockBackDir.x * -100, knockBackDir.y * knockBackPwr, transform.position.z));
         }
-
-        damaged = false;
         yield return 0;
     }
 
