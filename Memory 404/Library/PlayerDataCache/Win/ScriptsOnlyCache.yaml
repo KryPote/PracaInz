@@ -61,10 +61,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -72,35 +68,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 576}
+      Script: {instanceID: 578}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 9672}
     - Class: 114
-      Script: {instanceID: 9832}
+      Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 9872}
+      Script: {instanceID: 9874}
     - Class: 114
-      Script: {instanceID: 9944}
+      Script: {instanceID: 9946}
     - Class: 114
-      Script: {instanceID: 10270}
+      Script: {instanceID: 10272}
     - Class: 114
-      Script: {instanceID: 10274}
+      Script: {instanceID: 10276}
     - Class: 114
-      Script: {instanceID: 10300}
+      Script: {instanceID: 10302}
     - Class: 114
-      Script: {instanceID: 10404}
+      Script: {instanceID: 10406}
     - Class: 114
-      Script: {instanceID: 10416}
+      Script: {instanceID: 10418}
     - Class: 114
-      Script: {instanceID: 10484}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 11082}
+      Script: {instanceID: 11084}
     - Class: 114
-      Script: {instanceID: 11124}
+      Script: {instanceID: 11126}
     - Class: 114
-      Script: {instanceID: 11252}
+      Script: {instanceID: 11254}
     - Class: 114
-      Script: {instanceID: 11496}
+      Script: {instanceID: 11498}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -591,4 +587,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Chester/Desktop/NaPewnoNieWirus/Memory 404.exe
+  playerPath: "C:/Users/Chester/Desktop/Pami\u0119\u0107404/Memory 404.exe"

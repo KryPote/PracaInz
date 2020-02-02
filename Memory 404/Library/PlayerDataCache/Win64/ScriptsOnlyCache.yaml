@@ -2,10 +2,13 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraFollow
+    - Door
+    - GameMaster
     - GroundCheck
     - HUD
     - PauseMenu
     - Player
+    - Spikes
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
@@ -23,6 +26,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -59,6 +63,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -66,29 +74,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 576}
+      Script: {instanceID: 582}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 9676}
     - Class: 114
-      Script: {instanceID: 9832}
+      Script: {instanceID: 9838}
     - Class: 114
-      Script: {instanceID: 9872}
+      Script: {instanceID: 9878}
     - Class: 114
-      Script: {instanceID: 9944}
+      Script: {instanceID: 9950}
     - Class: 114
-      Script: {instanceID: 10274}
+      Script: {instanceID: 10276}
     - Class: 114
-      Script: {instanceID: 10402}
+      Script: {instanceID: 10280}
     - Class: 114
-      Script: {instanceID: 10414}
+      Script: {instanceID: 10306}
     - Class: 114
-      Script: {instanceID: 10482}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 11080}
+      Script: {instanceID: 10422}
     - Class: 114
-      Script: {instanceID: 11122}
+      Script: {instanceID: 10490}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11088}
+    - Class: 114
+      Script: {instanceID: 11130}
+    - Class: 114
+      Script: {instanceID: 11258}
+    - Class: 114
+      Script: {instanceID: 11502}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -302,6 +316,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 20ec0ab2ca560b0de6c271004472b525
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Door
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -314,7 +334,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 6fbbb666c7018666767bc486bba0cdf6
+      Hash: 0c089642b2f18996f6e75979efadfa84
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -440,7 +460,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 44910d0bdbaedf6aeaa3fe5e741933f4
+      Hash: b3788a93109b221924da8cbb3727d4d6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFollow
@@ -462,6 +482,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: f93e24c72eaea2b0e95acbed4dd91dc0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameMaster
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -567,4 +593,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Chester/Desktop/hehe/Memory 404.exe
+  playerPath: "C:/Users/Chester/Desktop/Pami\u0119\u0107404/Memory 404.exe"
